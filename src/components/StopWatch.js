@@ -16,15 +16,15 @@ export default function StopWatch() {
 		};
 	}, [isrunning]);
 
-	function start() {
+	function ToggleStopstart() {
 		setIsRunning(!isrunning);
         startTimeRef.current = Date.now() - elapsedTime;
         
 	}
 
-	function stop() {
-		setIsRunning(false);
-	}
+	// function stop() {
+	// 	setIsRunning(false);
+	// }
 
 	function reset() {
 		setElapsedTime(0);
@@ -47,18 +47,20 @@ export default function StopWatch() {
 	}
 
 	return (
-		<div className="stopWatch">
-			<div className="display">{formateTime()}</div>
-			<div className="controls">
-				<button onClick={start} className="start-button">
-					{isrunning ? "Stop" : "Start"}
-				</button>
-				<button onClick={reset} className="reset-button">
-					Reset
-				</button>
-				{/* <button onClick={stop} className="stop-button">
+		<div className="container">
+			<div className="stopWatch">
+				<div className="display">{formateTime()}</div>
+				<div className="controls">
+					<button onClick={ToggleStopstart} className="start-button">
+						{isrunning ? "Stop" : "Start"}
+					</button>
+					<button onClick={reset} className="reset-button">
+						Reset
+					</button>
+					{/* <button onClick={stop} className="stop-button">
 					Stop
 				</button> */}
+				</div>
 			</div>
 		</div>
 	);
