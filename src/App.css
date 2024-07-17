@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 50vh;
+  
+  background-color:hsl(204, 56%, 25%);
+
+}
+.stopWatch{
+  background-color: #264653;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px solid #caf0f8;
+  padding: 30px;
+  border-radius: 20px;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.display{
+  font-size: 5rem;
+  font-family: monospace;
+  margin-bottom: 35px;
+  font-weight: 540;
+  color: antiquewhite;
+  text-shadow: 2px 2px 2px black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.controls button{
+  font-size: 1.5rem;
+  border-radius: 10px;
+  padding: 10px;
+  background-color:;
+  margin: 0 30px;
+  font-weight: 600;
+  min-width: 125px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+.start-button{
+
+  background-color: #00bbf9;
+  color:#edf6f9;
+}
+.start-button:hover{
+
+  background-color: hsl(195, 100%, 59%);
+}
+.stop-button{
+  color: antiquewhite;
+  background-color: #343a40;
+}
+.stop-button:hover{
+  
+  background-color: hsl(210, 10%, 33%);
+}
+.reset-button:hover{
+  
+  background-color: hsl(210, 10%, 33%);
+}
+.reset-button{
+  color: antiquewhite;
+
+  background-color: #343a40;
 }
